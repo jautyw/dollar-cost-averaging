@@ -1,0 +1,71 @@
+.investment-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative; /* Ensure the parent container is positioned relative */
+}
+
+.amount-input,
+.years-input,
+.search-input {
+  width: 150px; /* Set a consistent width */
+  height: 40px; /* Set a consistent height */
+  padding: 10px; /* Set consistent padding */
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.search-button {
+  height: 40px; /* Match the height of the input boxes */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-left: none; /* Remove the left border to avoid double border */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.stock-searcher {
+  display: inline-block;
+  position: relative; /* Ensure the stock searcher is positioned relative */
+  width: 150px; /* Match the width of the input box */
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0 5px;
+  border-top: none; /* Remove the top border to avoid double border */
+  border-radius: 0 0 5px 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  position: absolute;
+  top: 100%; /* Position the results list below the input */
+  left: 0;
+  width: calc(100% - 2px); /* Match the width of the parent container and account for borders */
+  height: auto;
+  z-index: 1000;
+}
+
+.search-results li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
